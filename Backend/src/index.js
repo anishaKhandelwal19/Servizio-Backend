@@ -2,8 +2,9 @@ import app from "./app.js";
 import { config } from "dotenv";
 import connectToDB from "./config/mongoDB.js";
 import initializeFirebase from "./config/fireBaseAdmin.js";
-// import openApiSpec from "./config/openapi.js";
+import openApiSpec from "./config/openapi.js";
 // import fs from "fs";
+
 initializeFirebase();
 
 // fs.writeFileSync("openapi.json", JSON.stringify(openApiSpec, null, 2));

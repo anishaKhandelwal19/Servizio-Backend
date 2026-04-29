@@ -21,7 +21,13 @@ app.use(morgan("tiny"));
 app.use(fileupload());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(
+  cors({
+    origin: "*", // Allow all origins (or restrict later)
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 app.use(cookieParser());
 
 app.use("/documentation", swaggerUi.serve, swaggerUi.setup(openApiSpec));
@@ -31,5 +37,9 @@ app.use("/api/customer", admin);
 app.use("/api", refreshToken);
 app.use("/api", menu);
 app.use("/api/restaurant", restaurant);
+
+app.get("/", (req, res) => {
+  res.send("Servizio backend is running!");
+});
 
 export default app;

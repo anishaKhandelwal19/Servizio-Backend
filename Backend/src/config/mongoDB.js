@@ -1,5 +1,6 @@
-import { connect } from "mongoose";
+import mongoose, { connect } from "mongoose";
 
+mongoose.set("strictQuery", false);
 const connectToDB = async () => {
   try {
     const DB_URL = process.env.DB_URL;

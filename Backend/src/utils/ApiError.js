@@ -21,3 +21,8 @@ class ApiError extends Error {
 }
 
 export default ApiError;
+
+// custom error class for api
+// ApiError is a standardized way to handle errors in your API.
+
+// Makes responses consistent, e.g.:
