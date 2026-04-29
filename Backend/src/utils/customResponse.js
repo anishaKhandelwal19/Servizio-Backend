@@ -9,3 +9,9 @@ const ErrorHandler = (res, status, message, errors) => {
 };
 
 export { ControllerResponse, ErrorHandler };
+
+// Use ApiResponse for normal data return.
+
+// Use ApiError when something goes wrong.
+
+// Use ControllerResponse and ErrorHandler as wrappers to send them cleanly in Express routes.

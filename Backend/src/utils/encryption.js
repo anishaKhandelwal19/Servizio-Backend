@@ -15,3 +15,9 @@ const verifyPassword = async (password, hashedPassword) => {
 };
 
 export { hashPassword, verifyPassword };
+
+// Q why bcrypt
+// A bcrypt is a widely used and trusted library for hashing passwords securely. It incorporates several important security
+// bcrypt → Industry-standard library for password hashing.
+
+// Password → bcrypt hash → AES encrypt (using SHA-512 derived key/IV) → store.
